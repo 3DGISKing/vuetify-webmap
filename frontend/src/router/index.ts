@@ -2,10 +2,8 @@ import { createRouter, createWebHistory } from "vue-router/auto";
 import { useStore } from "vuex";
 
 // navigation guard to redirect to login page
-const requireAuth = (to: any, from: any, next: any) => {
+const requireAuth = (to: unknown, from: unknown, next: unknown) => {
     const store = useStore();
-
-    console.log(store.state);
 
     if (!store.state.user) {
         next({ name: "Signin" });
@@ -14,9 +12,8 @@ const requireAuth = (to: any, from: any, next: any) => {
     }
 };
 
-const redirectIfLoggedIn = (to: any, from: any, next: any) => {
+const redirectIfLoggedIn = (to: unknown, from: unknown, next: unknown) => {
     const store = useStore();
-    console.log(store.state);
 
     if (store.state.user) {
         next({ name: "Main" });

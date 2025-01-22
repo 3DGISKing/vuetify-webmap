@@ -2,7 +2,7 @@
     "name": "vuetify-project",
     "private": true,
     "type": "module",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "scripts": {
         "dev": "vite --open",
         "build": "run-p type-check \"build-only {@}\" --",
@@ -87,4 +87,3 @@
         "vue-tsc": "^2.1.10"
     }
 }
-

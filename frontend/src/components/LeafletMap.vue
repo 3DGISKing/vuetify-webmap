@@ -1,7 +1,10 @@
 <template>
-    <div>
-        <div id="map" style="height: 90vh"></div>
-    </div>
+  <div>
+    <div
+      id="map"
+      style="height: 90vh"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -30,7 +33,7 @@ onMounted(() => {
 
     const drawnItems = new L.FeatureGroup();
     map.addLayer(drawnItems);
-    var drawControl = new L.Control.Draw({
+    const drawControl = new L.Control.Draw({
         edit: {
             featureGroup: drawnItems
         }
@@ -54,7 +57,8 @@ onMounted(() => {
 
     L.geoJSON(USA.features).addTo(map);
 
-    const marker = L.marker([38, -106]).addTo(map);
+    L.marker([38, -106]).addTo(map);
+
     const polygon = L.polygon([
         [38, -106],
         [38, -107],

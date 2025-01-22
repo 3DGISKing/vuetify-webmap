@@ -1,5 +1,9 @@
 #### Added/Updated
 
+### 0.0.4 - 2025-01-22
+
+- fix eslint errors.
+
 ### 0.0.3 - 2025-01-22
 
 - add signin logic.

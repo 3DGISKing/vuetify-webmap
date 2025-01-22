@@ -1,5 +1,5 @@
 <template>
-    <v-data-table :items="items"></v-data-table>
+  <v-data-table :items="items" />
 </template>
 
 <script setup lang="ts">

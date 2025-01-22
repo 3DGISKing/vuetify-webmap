@@ -8,6 +8,7 @@ export class MarineApp {
     private _member1 = 100.0;
 
     constructor() {
+        // eslint-disable-next-line @typescript-eslint/no-this-alias
         theApp = this;
     }
 }

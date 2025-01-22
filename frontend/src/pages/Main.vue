@@ -1,11 +1,11 @@
 <template>
     <v-card>
         <v-toolbar color="cyan" dark flat>
-            <v-app-bar-nav-icon></v-app-bar-nav-icon>
+            <v-app-bar-nav-icon />
 
             <v-toolbar-title>Your Dashboard</v-toolbar-title>
 
-            <v-spacer></v-spacer>
+            <v-spacer />
 
             <v-btn icon>
                 <v-icon>mdi-magnify</v-icon>

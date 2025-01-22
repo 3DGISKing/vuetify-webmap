@@ -6,18 +6,12 @@
 
 // Plugins
 import { registerPlugins } from "@/plugins";
-
-// Components
 import App from "./App.vue";
-
-// Composables
 import { createApp } from "vue";
-
 import { MarineApp } from "./core/MarineApp";
 
-function createMarineApp() {}
-
 export default function main() {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const marineApp = new MarineApp();
 
     const app = createApp(App);

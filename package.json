@@ -1,0 +1,16 @@
+{
+  "name": "vuetify-webmap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/3DGISKing/vuetify-webmap",
+  "author": "ZhefengJin <wugis1219@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "scripts": {
+    "dev-api": "cd api && yarn dev",
+    "dev-frontend": "cd frontend && yarn dev",
+    "dev": "concurrently \"yarn dev-api\" \"yarn dev-frontend\""
+  }
+}

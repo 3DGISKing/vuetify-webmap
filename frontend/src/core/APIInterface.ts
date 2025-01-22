@@ -16,7 +16,8 @@ class APIInterface {
             });
 
             return data.data.user;
-        } catch (error: any) {
+        } catch (error: unknown) {
+            console.error(error);
             return null;
         }
     }
