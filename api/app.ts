@@ -45,9 +45,19 @@ app.use(mongoSanitize());
 app.use(xss());
 
 // Enable cors
-app.use(cors({ origin: "http://127.0.0.1:3000", credentials: true }));
-// dev instanace
-app.use(cors({ origin: "http://34.29.156.255:3000", credentials: true }));
+
+const whitelist = ["http://localhost:3000"];
+const corsOptions = {
+    origin: function (origin: any, callback: any) {
+        if (whitelist.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    }
+};
+
+app.use(cors(corsOptions));
 
 // API Routes
 app.use("/api/v1/users", userRouter);

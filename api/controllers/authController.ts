@@ -29,6 +29,7 @@ const createSendToken = (user: IUserDocument, statusCode: number, res: Response)
         secure: false
         // httpOnly: true,
     };
+
     if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
     res.cookie("jwt", token, cookieOptions);
@@ -100,41 +101,6 @@ export const signupOrganization = catchAsync(async (req: CustomRequest, res: Res
     // await new Email(newUser, url).sendWelcome()
 
     createSendToken(newOrganization, 201, res);
-});
-
-// Signup user under an organization
-export const signupUnderOrganization = catchAsync(async (req: CustomRequest, res: Response, next: NextFunction) => {
-    // Check it user is a organization
-    if (req.user.role === "user") {
-        return next(new AppError({ message: "You are not organization and can not sign up users", statusCode: 401 }));
-    }
-
-    await UserModel.findByIdAndUpdate(
-        req.user._id,
-        { userCount: updatedUserCount },
-        {
-            new: true,
-            runValidators: true
-        }
-    );
-
-    // Create new user for the organization
-    const newUser = await UserModel.create({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        password: req.body.password
-    });
-
-    // const url = `${req.protocol}://${req.get('host')}/me`
-    // console.log(url)
-    // await new Email(newUser, url).sendWelcome()
-
-    res.status(201).json({
-        status: "success",
-        data: {
-            user: newUser
-        }
-    });
 });
 
 // Login User Route

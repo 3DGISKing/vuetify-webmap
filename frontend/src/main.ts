@@ -13,9 +13,17 @@ import App from "./App.vue";
 // Composables
 import { createApp } from "vue";
 
-const app = createApp(App);
+import { MarineApp } from "./core/MarineApp";
 
-registerPlugins(app);
+function createMarineApp() {}
 
-app.mount("#app");
+export default function main() {
+    const marineApp = new MarineApp();
+
+    const app = createApp(App);
+
+    registerPlugins(app);
+
+    app.mount("#app");
+}
 

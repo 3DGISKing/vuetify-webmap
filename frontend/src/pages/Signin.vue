@@ -1,5 +1,7 @@
 <template>
     <div>
+        <v-alert v-if="occuredError" text="Incorrect email or password" title="Alert title" type="error"></v-alert>
+
         <v-img
             class="mx-auto my-6"
             max-width="228"
@@ -61,15 +63,44 @@
 </template>
 
 <script lang="ts">
+import { inject } from "vue";
+import { MarineApp } from "@/core/MarineApp";
+import { User } from "@/core";
+
+let marineApp: MarineApp;
+
 export default {
     data: () => ({
+        occuredError: false,
         visible: false
     }),
     methods: {
-        onClickLogin() {
+        async onClickLogin() {
             console.warn("setup dummy user");
-            this.$store.commit("signin");
+
+            const userPromise = marineApp.apiInterface.getUser("test@test.com", "test4321");
+
+            userPromise.then((user: User) => {
+                if (user) {
+                    this.$store.dispatch("setUser", {
+                        firstName: user.firstName,
+                        lastName: user.lastName
+                    });
+                } else {
+                    this.occuredError = true;
+                }
+            });
         }
+    },
+    watch: {
+        "$store.state.user": function () {
+            if (this.$store.state.user) {
+                this.$router.push("/");
+            }
+        }
+    },
+    setup() {
+        marineApp = inject("marineApp") as MarineApp;
     }
 };
 </script>

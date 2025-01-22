@@ -1,5 +1,12 @@
 #### Added/Updated
 
+### 0.0.3 - 2025-01-22
+
+- add signin logic.
+- add MarineApp.
+- add APIInterface.
+- add initial Db.
+
 ### 0.0.2 - 2025-01-20
 
 - add backend

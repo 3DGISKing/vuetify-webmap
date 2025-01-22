@@ -1,14 +1,24 @@
 import { createStore } from "vuex";
+import type { User } from "@/core";
+
+type AppState = {
+    user: User | undefined;
+};
 
 const store = createStore({
     state() {
         return {
-            signined: false
+            user: undefined
         };
     },
     mutations: {
-        signin(state: any) {
-            state.signined = true;
+        updateUser(state: AppState, payload: User) {
+            state.user = payload;
+        }
+    },
+    actions: {
+        setUser(context, payload: User) {
+            context.commit("updateUser", payload);
         }
     }
 });

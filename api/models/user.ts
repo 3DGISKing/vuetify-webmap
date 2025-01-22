@@ -8,6 +8,7 @@ import bcrypt from "bcryptjs";
 interface IUser {
     firstName: string;
     lastName: string;
+    email: string;
     role: string;
     password: string;
     lastLogin?: Date;

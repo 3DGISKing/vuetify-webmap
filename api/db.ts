@@ -10,7 +10,7 @@ import chalk from "chalk";
 
 const connectDB = async () => {
     try {
-        let uri = "mongodb://127.0.0.1:27017/siros-web";
+        let uri = "mongodb://127.0.0.1:27017/marine";
 
         // https://stackoverflow.com/questions/74747476/deprecationwarning-mongoose-the-strictquery-option-will-be-switched-back-to
         mongoose.set("strictQuery", true);

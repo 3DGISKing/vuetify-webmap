@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "606b2304f1b10796f349f423"
+  },
+  "role": "admin",
+  "active": true,
+  "email": "test@test.com",
+  "firstName": "Zhefeng",
+  "lastName": "Jin",
+  "id": "3DGISKing",
+  "password": "$2a$12$gikSCSW1ZDgpaXbfa.Tc9uqfJJDtvoxVPBqdq9NyZzHVV38Ibiwfa",
+  "lastLogin": {
+    "$date": "2025-01-22T07:31:35.581Z"
+  },
+  "createdAt": {
+    "$date": "2022-01-01T00:00:00.000Z"
+  }
+}]

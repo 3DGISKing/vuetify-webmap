@@ -1,13 +1,5 @@
-/**
- * router/index.ts
- *
- * Automatic routes for `./src/pages/*.vue`
- */
-
-// Composables
 import { createRouter, createWebHistory } from "vue-router/auto";
 import { useStore } from "vuex";
-import { routes } from "vue-router/auto-routes";
 
 // navigation guard to redirect to login page
 const requireAuth = (to: any, from: any, next: any) => {
@@ -15,7 +7,7 @@ const requireAuth = (to: any, from: any, next: any) => {
 
     console.log(store.state);
 
-    if (!store.state.signined) {
+    if (!store.state.user) {
         next({ name: "Signin" });
     } else {
         next();
@@ -26,7 +18,7 @@ const redirectIfLoggedIn = (to: any, from: any, next: any) => {
     const store = useStore();
     console.log(store.state);
 
-    if (store.state.signined) {
+    if (store.state.user) {
         next({ name: "Main" });
     } else {
         next();

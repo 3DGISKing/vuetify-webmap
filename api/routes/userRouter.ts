@@ -6,7 +6,6 @@ import {
     logout,
     signupOrganization,
     protect,
-    signupUnderOrganization,
     forgotPassword,
     resetPassword,
     updatePassword,
@@ -20,7 +19,6 @@ const router = express.Router();
 router.post("/signup", signup);
 router.post("/login", login);
 router.post("/signuporganization", signupOrganization);
-router.post("/signupunderorganization", protect, signupUnderOrganization);
 router.get("/logout", logout);
 
 router.post("/forgotpassword", forgotPassword);
@@ -36,12 +34,8 @@ router.get("/currentuser", currentUser);
 router.get("/all", allUsers);
 router.patch("/updateme", updateMe);
 
-router
-    .route("/")
-    .delete(deleteUsersByIds);
+router.route("/").delete(deleteUsersByIds);
 
-router
-    .route("/:id")
-    .patch(updateUser)
+router.route("/:id").patch(updateUser);
 
 export default router;
