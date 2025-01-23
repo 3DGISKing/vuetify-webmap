@@ -1,5 +1,9 @@
 #### Added/Updated
 
+### 0.0.5 - 2025-01-23
+
+- add vue/html-indent rule into eslint config.
+
 ### 0.0.4 - 2025-01-22
 
 - fix eslint errors.
