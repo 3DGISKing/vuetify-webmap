@@ -1,4 +1,11 @@
-#### Added/Updated
+# Change Log
+
+### 0.0.6 - 2025-01-24
+
+#### Fixed
+
+- Property '$store' does not exist on type 'CreateComponentPublicInstanceWithMixins<ToResolvedProps<{}.
+- Property '$router' does not exist on type 'CreateComponentPublicInstanceWithMixins<ToResolvedProps<{}.
 
 ### 0.0.5 - 2025-01-23
 
