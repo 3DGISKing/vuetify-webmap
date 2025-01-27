@@ -31,6 +31,7 @@
                 <v-icon left> mdi-lock </v-icon>
                 Option 2
             </v-tab>
+            <v-tab value="mapList"> MapList </v-tab>
         </v-tabs>
 
         <v-tabs-window v-model="tab">
@@ -40,11 +41,16 @@
             <v-tabs-window-item value="table">
                 <TestTable />
             </v-tabs-window-item>
+            <v-tabs-window-item value="mapList">
+                <MapList />
+            </v-tabs-window-item>
         </v-tabs-window>
     </v-card>
 </template>
 
 <script lang="ts">
+import MapList from "@/components/MapList.vue";
+
 // import ContourMap from '@/components/ContourMap.vue';
 
 export default {

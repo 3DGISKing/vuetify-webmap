@@ -6,8 +6,8 @@ let theApp: MarineApp;
 
 export class MarineApp {
     readonly apiInterface = new APIInterface();
-    private _member1 = 100.0;
 
+    private _mapCount = 0;
     constructor() {
         // eslint-disable-next-line @typescript-eslint/no-this-alias
         theApp = this;
@@ -50,6 +50,12 @@ export class MarineApp {
         const data = await loadNetCDF(ncFilePath);
 
         return data;
+    }
+
+    getMapCount() {
+        this._mapCount++;
+
+        return this._mapCount;
     }
 }
 

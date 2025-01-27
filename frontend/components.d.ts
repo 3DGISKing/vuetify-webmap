@@ -11,8 +11,10 @@ declare module 'vue' {
     copy: typeof import('./src/components/LeafletMap copy.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     LeafletMap: typeof import('./src/components/LeafletMap.vue')['default']
+    MapList: typeof import('./src/components/MapList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SimpleMap: typeof import('./src/components/SimpleMap.vue')['default']
     Test: typeof import('./src/components/test.vue')['default']
     TestTable: typeof import('./src/components/TestTable.vue')['default']
   }
