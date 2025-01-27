@@ -29,9 +29,10 @@
 
             <v-tab value="verticalToolbar"> Vertical Toolbar </v-tab>
             <v-tab value="mapList"> MapList </v-tab>
+            <v-tab value="distributeMap"> Distribute Map </v-tab>
         </v-tabs>
 
-        <v-tabs-window v-model="tab">
+        <v-tabs-window v-model="tab" class="tab-window-root">
             <v-tabs-window-item value="leafletMap">
                 <LeafletMap />
             </v-tabs-window-item>
@@ -44,11 +45,15 @@
             <v-tabs-window-item value="mapList">
                 <MapList />
             </v-tabs-window-item>
+            <v-tabs-window-item value="distributeMap">
+                <DistributeMap />
+            </v-tabs-window-item>
         </v-tabs-window>
     </v-card>
 </template>
 
 <script lang="ts">
+import DistributeMap from "@/components/DistributeMap.vue";
 import MapList from "@/components/MapList.vue";
 import VerticalToolbar from "@/components/VerticalToolbar.vue";
 
@@ -61,3 +66,9 @@ export default {
     methods: {}
 };
 </script>
+
+<style scoped>
+.tab-window-root {
+    height: 700px;
+}
+</style>

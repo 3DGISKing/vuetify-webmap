@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.11 - 2025-01-27
+
+#### Added
+
+- Distribute Map
+
 ### 0.0.10 - 2025-01-27
 
 #### Added

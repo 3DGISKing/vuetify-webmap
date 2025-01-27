@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     ContourMap: typeof import('./src/components/ContourMap.vue')['default']
     copy: typeof import('./src/components/LeafletMap copy.vue')['default']
+    DistributeMap: typeof import('./src/components/DistributeMap.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     LeafletMap: typeof import('./src/components/LeafletMap.vue')['default']
     MapList: typeof import('./src/components/MapList.vue')['default']
