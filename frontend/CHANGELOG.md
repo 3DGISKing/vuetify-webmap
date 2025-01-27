@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.7 - 2025-01-27
+
+#### Added
+
+- add sample world ocean data and the logic for reading it.
+
 ### 0.0.6 - 2025-01-24
 
 #### Fixed

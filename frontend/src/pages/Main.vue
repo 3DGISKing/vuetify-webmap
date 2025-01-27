@@ -45,6 +45,8 @@
 </template>
 
 <script lang="ts">
+// import ContourMap from '@/components/ContourMap.vue';
+
 export default {
     data: () => ({
         tab: "leafletMap"

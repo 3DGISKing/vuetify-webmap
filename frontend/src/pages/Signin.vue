@@ -69,10 +69,6 @@ import { type User } from "@/core";
 
 let marineApp: MarineApp;
 
-const i = 0;
-
-console.log(i);
-
 export default {
     setup() {
         marineApp = inject("marineApp") as MarineApp;

@@ -3,7 +3,7 @@
 import connectDB from "./db";
 import app from "./app";
 import path from "path";
-import dotenv from  "dotenv";
+import dotenv from "dotenv";
 
 // Import .env variables
 dotenv.config({ path: path.resolve(__dirname, "./config.env") });
@@ -12,7 +12,7 @@ dotenv.config({ path: path.resolve(__dirname, "./config.env") });
 connectDB();
 
 // Default Port
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3500;
 
 // Start server
 const server = app.listen(port);

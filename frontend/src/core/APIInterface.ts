@@ -3,7 +3,7 @@
 
 import axios from "axios";
 
-const serverUrl = "http://localhost:8080";
+const serverUrl = "http://localhost:3500";
 
 class APIInterface {
     constructor() {}
