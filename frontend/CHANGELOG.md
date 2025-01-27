@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.10 - 2025-01-27
+
+#### Added
+
+- Vertical Toolbar
+
 ### 0.0.9 - 2025-01-27
 
 #### Added

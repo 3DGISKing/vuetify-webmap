@@ -27,10 +27,7 @@
                 Table
             </v-tab>
 
-            <v-tab>
-                <v-icon left> mdi-lock </v-icon>
-                Option 2
-            </v-tab>
+            <v-tab value="verticalToolbar"> Vertical Toolbar </v-tab>
             <v-tab value="mapList"> MapList </v-tab>
         </v-tabs>
 
@@ -41,6 +38,9 @@
             <v-tabs-window-item value="table">
                 <TestTable />
             </v-tabs-window-item>
+            <v-tabs-window-item value="verticalToolbar">
+                <VerticalToolbar />
+            </v-tabs-window-item>
             <v-tabs-window-item value="mapList">
                 <MapList />
             </v-tabs-window-item>
@@ -50,6 +50,7 @@
 
 <script lang="ts">
 import MapList from "@/components/MapList.vue";
+import VerticalToolbar from "@/components/VerticalToolbar.vue";
 
 // import ContourMap from '@/components/ContourMap.vue';
 

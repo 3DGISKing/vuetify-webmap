@@ -17,5 +17,6 @@ declare module 'vue' {
     SimpleMap: typeof import('./src/components/SimpleMap.vue')['default']
     Test: typeof import('./src/components/test.vue')['default']
     TestTable: typeof import('./src/components/TestTable.vue')['default']
+    VerticalToolbar: typeof import('./src/components/VerticalToolbar.vue')['default']
   }
 }
