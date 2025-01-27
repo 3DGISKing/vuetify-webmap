@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.8 - 2025-01-27
+
+#### Fixed
+
+- If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement.
+
 ### 0.0.7 - 2025-01-27
 
 #### Added
