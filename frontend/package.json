@@ -2,7 +2,7 @@
     "name": "vuetify-project",
     "private": true,
     "type": "module",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "scripts": {
         "dev": "vite --open",
         "build": "run-p type-check \"build-only {@}\" --",
@@ -21,6 +21,8 @@
         "cesium": "^1.125.0",
         "core-js": "^3.37.1",
         "country-codes-list": "^1.6.11",
+        "d3": "^7.9.0",
+        "d3-contour": "^4.0.2",
         "debug": "^4.4.0",
         "dompurify": "^3.2.3",
         "fast-deep-equal": "^3.1.3",

@@ -22,9 +22,9 @@
                 Leaflet Map
             </v-tab>
 
-            <v-tab value="table">
+            <v-tab value="contourMap">
                 <v-icon left> mdi-lock </v-icon>
-                Table
+                ContourMap
             </v-tab>
 
             <v-tab value="verticalToolbar"> Vertical Toolbar </v-tab>
@@ -36,8 +36,8 @@
             <v-tabs-window-item value="leafletMap">
                 <LeafletMap />
             </v-tabs-window-item>
-            <v-tabs-window-item value="table">
-                <TestTable />
+            <v-tabs-window-item value="contourMap">
+                <ContourMap />
             </v-tabs-window-item>
             <v-tabs-window-item value="verticalToolbar">
                 <VerticalToolbar />
@@ -53,6 +53,7 @@
 </template>
 
 <script lang="ts">
+import ContourMap from "@/components/ContourMap.vue";
 import DistributeMap from "@/components/DistributeMap.vue";
 import MapList from "@/components/MapList.vue";
 import VerticalToolbar from "@/components/VerticalToolbar.vue";
