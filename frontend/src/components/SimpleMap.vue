@@ -18,13 +18,12 @@ onMounted(() => {
 
     const map = L.map(leafletMapDiv.value.id, {
         zoomControl: true,
-        zoom: 1,
+        center: [35, 127],
+        zoom: 4,
         zoomAnimation: false,
         fadeAnimation: true,
         markerZoomAnimation: true
     });
-
-    map.setView([35, 127], 4);
 
     const googleSat = L.tileLayer("http://localhost:1217/GoogleSatTMS/lyrss&x{x}&y{y}&z{z}.jpg", {
         maxZoom: 20
@@ -32,8 +31,10 @@ onMounted(() => {
 
     googleSat.addTo(map);
 
+    // map.setView([35, 127], 4);
+
     setTimeout(() => {
         map.invalidateSize(true);
-    }, 100);
+    }, 0);
 });
 </script>
