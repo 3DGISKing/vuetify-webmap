@@ -16,8 +16,6 @@ onMounted(() => {
     const marineApp = inject("marineApp") as MarineApp;
     leafletMapDiv.value.id = "simpleMap-" + marineApp.getMapCount();
 
-    console.log(marineApp);
-
     const map = L.map(leafletMapDiv.value.id, {
         zoomControl: true,
         zoom: 1,
@@ -26,11 +24,16 @@ onMounted(() => {
         markerZoomAnimation: true
     });
 
-    map.setView([38, -106], 4);
+    map.setView([35, 127], 4);
 
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+    const googleSat = L.tileLayer("http://localhost:1217/GoogleSatTMS/lyrss&x{x}&y{y}&z{z}.jpg", {
+        maxZoom: 20
+    });
+
+    googleSat.addTo(map);
+
+    setTimeout(() => {
+        map.invalidateSize(true);
+    }, 100);
 });
 </script>

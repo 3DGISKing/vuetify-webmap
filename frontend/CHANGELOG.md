@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.12 - 2025-01-28
+
+#### Update
+
+- Add offline Google TMS data.
+
 ### 0.0.11 - 2025-01-27
 
 #### Added
