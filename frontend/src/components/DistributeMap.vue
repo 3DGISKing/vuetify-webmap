@@ -4,7 +4,7 @@ import VerticalToolbar from "./VerticalToolbar.vue";
 </script>
 
 <template>
-    <v-container id="qqqq" class="root">
+    <v-container id="distribute-map-root" class="root">
         <v-row>
             <v-col cols="11">
                 <MapList />
@@ -18,8 +18,7 @@ import VerticalToolbar from "./VerticalToolbar.vue";
 </template>
 
 <style scoped>
-.root {
-    height: 100%;
-    overflow-y: auto;
+#distribute-map-root {
+    max-width: 100vw !important;
 }
 </style>

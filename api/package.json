@@ -1,6 +1,6 @@
 {
     "name": "api",
-    "version": "0.04",
+    "version": "0.05",
     "description": "",
     "main": "server.js",
     "proxy": "http://localhost:8080",
@@ -20,11 +20,6 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@google-cloud/bigquery": "^6.1.0",
-        "@googlemaps/google-maps-services-js": "^3.3.35",
-        "@looker/sdk-node": "^23.14.0",
-        "@types/request": "^2.48.8",
-        "@types/request-promise": "^4.1.48",
         "bcryptjs": "^2.4.3",
         "chalk": "^4.1.0",
         "cookie-parser": "^1.4.5",
@@ -34,12 +29,9 @@
         "express-async-errors": "^3.1.1",
         "express-mongo-sanitize": "^2.0.2",
         "helmet": "^4.4.1",
-        "html-to-text": "^7.0.0",
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^6.0.5",
         "nodemailer": "^6.1.1",
-        "request": "^2.88.2",
-        "request-promise": "^4.2.6",
         "validator": "^13.5.2",
         "xss-clean": "^0.1.1"
     },

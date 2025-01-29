@@ -1,6 +1,14 @@
-#### Added/Updated
+# Change Log
 
-### 0.0.4 - 2025-01-22
+### 0.0.5 - 2025-01-29
+
+#### Updated
+
+-   remove unnecessary packages.
+
+### 0.0.4 - 2025-01-29
+
+#### Added
 
 -   add nodemon.
 

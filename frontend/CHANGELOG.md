@@ -1,5 +1,12 @@
 # Change Log
 
+### 0.0.14 - 2025-01-29
+
+#### Updated
+
+- correct vertical height adjustment.
+- remove unnecessary packages.
+
 ### 0.0.13 - 2025-01-29
 
 #### Added
