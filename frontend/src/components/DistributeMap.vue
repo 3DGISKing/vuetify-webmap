@@ -10,7 +10,7 @@ import VerticalToolbar from "./VerticalToolbar.vue";
                 <MapList />
             </v-col>
 
-            <v-col cols="1">
+            <v-col align="center" cols="1">
                 <VerticalToolbar></VerticalToolbar>
             </v-col>
         </v-row>
