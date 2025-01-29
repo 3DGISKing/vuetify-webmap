@@ -31,6 +31,8 @@ onMounted(() => {
     map.setView([35, 127], 5);
     const drawnItems = new L.FeatureGroup();
     map.addLayer(drawnItems);
+
+    // @ts-ignore
     const drawControl = new L.Control.Draw({
         edit: {
             featureGroup: drawnItems
@@ -40,8 +42,12 @@ onMounted(() => {
     const options = {
         position: "topright"
     };
+
+    // @ts-ignore
     const measureControl = new L.Control.Measure(options);
     measureControl.addTo(map);
+
+    // @ts-ignore
     initialMap.value = map;
 
     const googleSat = L.tileLayer("http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}", {

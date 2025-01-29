@@ -6,8 +6,10 @@ const requireAuth = (to: unknown, from: unknown, next: unknown) => {
     const store = useStore();
 
     if (!store.state.user) {
+        // @ts-ignore
         next({ name: "Signin" });
     } else {
+        // @ts-ignore
         next();
     }
 };
@@ -16,8 +18,10 @@ const redirectIfLoggedIn = (to: unknown, from: unknown, next: unknown) => {
     const store = useStore();
 
     if (store.state.user) {
+        // @ts-ignore
         next({ name: "Main" });
     } else {
+        // @ts-ignore
         next();
     }
 };

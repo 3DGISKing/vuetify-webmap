@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import MapList from "./MapList.vue";
 import VerticalToolbar from "./VerticalToolbar.vue";
 </script>
 

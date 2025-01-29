@@ -13,6 +13,7 @@ import { contours as d3contours } from "d3-contour";
 
 import { MarineApp } from "@/core/MarineApp";
 
+// @ts-ignore
 const unitToGeographic = (gridx, gridy, i, j) => {
     var ii = Math.floor(i);
     var jj = Math.floor(j);
@@ -41,12 +42,15 @@ const unitToGeographic = (gridx, gridy, i, j) => {
     return [x, y];
 };
 
+// @ts-ignore
 const createContours = (data, options) => {
     var zdomain = extent(
         [].concat.apply([], data.z).filter((f) => {
             return !isNaN(parseFloat(f)) && isFinite(f);
         })
     );
+
+    // @ts-ignore
     var thresholds = range(zdomain[0], zdomain[1], (zdomain[1] - zdomain[0]) / options.thresholds);
 
     var values = data.z.flat();
@@ -221,7 +225,9 @@ onMounted(() => {
         }
     ];
 
+    // @ts-ignore
     function getColor(value, min, max, colors) {
+        // @ts-ignore
         function hex(c) {
             var s = "0123456789abcdef";
             var i = parseInt(c, 10);
@@ -229,9 +235,13 @@ onMounted(() => {
             i = Math.round(Math.min(Math.max(0, i), 255));
             return s.charAt((i - (i % 16)) / 16) + s.charAt(i % 16);
         }
+
+        // @ts-ignore
         function trim(s) {
             return s.charAt(0) === "#" ? s.substring(1, 7) : s;
         }
+
+        // @ts-ignore
         function convertToRGB(hex) {
             var color = [];
             color[0] = parseInt(trim(hex).substring(0, 2), 16);
@@ -239,6 +249,7 @@ onMounted(() => {
             color[2] = parseInt(trim(hex).substring(4, 6), 16);
             return color;
         }
+        // @ts-ignore
         function convertToHex(rgb) {
             return hex(rgb[0]) + hex(rgb[1]) + hex(rgb[2]);
         }

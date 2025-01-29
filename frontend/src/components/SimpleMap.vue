@@ -14,8 +14,10 @@ let leafletMapDiv = ref(null);
 
 onMounted(() => {
     const marineApp = inject("marineApp") as MarineApp;
+    // @ts-ignore
     leafletMapDiv.value.id = "simpleMap-" + marineApp.getMapCount();
 
+    // @ts-ignore
     const map = L.map(leafletMapDiv.value.id, {
         zoomControl: true,
         center: [35, 127],

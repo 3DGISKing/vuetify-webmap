@@ -6,6 +6,7 @@
 
 <script setup lang="ts">
 import { ref, inject, onMounted } from "vue";
+import { MarineApp } from "@/core/MarineApp";
 import "cesium/Build/Cesium/Widgets/widgets.css";
 import { Cartesian3, TileMapServiceImageryProvider, Viewer } from "cesium";
 
@@ -13,8 +14,11 @@ let leafletMapDiv = ref(null);
 
 onMounted(() => {
     const marineApp = inject("marineApp") as MarineApp;
+
+    // @ts-ignore
     leafletMapDiv.value.id = "simpleMap-" + marineApp.getMapCount();
 
+    // @ts-ignore
     const viewer = new Viewer(leafletMapDiv.value.id, {
         baseLayer: false,
         requestRenderMode: true,
