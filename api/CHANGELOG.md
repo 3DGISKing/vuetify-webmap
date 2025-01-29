@@ -1,5 +1,9 @@
 #### Added/Updated
 
+### 0.0.4 - 2025-01-22
+
+-   add nodemon.
+
 ### 0.0.3 - 2025-01-22
 
 -   add signin logic.
