@@ -19,9 +19,8 @@
         <v-tabs v-model="tab">
             <v-tab value="leafletMap"> Leaflet Map </v-tab>
             <v-tab value="contourMap"> ContourMap </v-tab>
-            <v-tab value="verticalToolbar"> Vertical Toolbar </v-tab>
-            <v-tab value="mapList"> MapList </v-tab>
-            <v-tab value="distributeMap"> Distribute Map </v-tab>
+            <v-tab value="leafletDistributeMap"> Leaflet Distribute Map </v-tab>
+            <v-tab value="cesiumDistributeMap"> Cesium Distribute Map </v-tab>
         </v-tabs>
 
         <v-tabs-window v-model="tab" class="tab-window-root">
@@ -31,25 +30,17 @@
             <v-tabs-window-item value="contourMap">
                 <ContourMap />
             </v-tabs-window-item>
-            <v-tabs-window-item value="verticalToolbar">
-                <VerticalToolbar />
+            <v-tabs-window-item value="leafletDistributeMap">
+                <LeafletDistributeMap />
             </v-tabs-window-item>
-            <v-tabs-window-item value="mapList">
-                <MapList />
-            </v-tabs-window-item>
-            <v-tabs-window-item value="distributeMap">
-                <DistributeMap />
+            <v-tabs-window-item value="cesiumDistributeMap">
+                <CesiumDistributeMap />
             </v-tabs-window-item>
         </v-tabs-window>
     </v-card>
 </template>
 
 <script lang="ts">
-import ContourMap from "@/components/ContourMap.vue";
-import DistributeMap from "@/components/DistributeMap.vue";
-import MapList from "@/components/MapList.vue";
-import VerticalToolbar from "@/components/VerticalToolbar.vue";
-
 export default {
     data: () => ({
         tab: "leafletMap"

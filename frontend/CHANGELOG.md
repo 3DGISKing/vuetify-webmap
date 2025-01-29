@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.15 - 2025-01-29
+
+#### Added
+
+- add cesium map list.
+
 ### 0.0.14 - 2025-01-29
 
 #### Updated

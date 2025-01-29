@@ -7,11 +7,16 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    CesiumDistributeMap: typeof import('./src/components/CesiumDistributeMap.vue')['default']
+    CesiumMap: typeof import('./src/components/CesiumMap.vue')['default']
+    CesiumMapList: typeof import('./src/components/CesiumMapList.vue')['default']
     ContourMap: typeof import('./src/components/ContourMap.vue')['default']
-    copy: typeof import('./src/components/LeafletMap copy.vue')['default']
+    copy: typeof import('./src/components/LeafletDistributeMap copy.vue')['default']
     DistributeMap: typeof import('./src/components/DistributeMap.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    LeafletDistributeMap: typeof import('./src/components/LeafletDistributeMap.vue')['default']
     LeafletMap: typeof import('./src/components/LeafletMap.vue')['default']
+    LeafletMapList: typeof import('./src/components/LeafletMapList.vue')['default']
     MapList: typeof import('./src/components/MapList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
