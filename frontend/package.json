@@ -2,7 +2,7 @@
     "name": "vuetify-project",
     "private": true,
     "type": "module",
-    "version": "0.0.16",
+    "version": "0.0.17",
     "scripts": {
         "dev": "vite --open",
         "build": "run-p type-check \"build-only {@}\" --",
@@ -20,6 +20,7 @@
         "leaflet": "^1.9.4",
         "leaflet-draw": "^1.0.4",
         "leaflet-measure": "^3.1.0",
+        "to-smooth": "^2.2.0",
         "turf": "^3.0.14",
         "vue": "^3.4.31",
         "vue-axios": "^3.5.2",

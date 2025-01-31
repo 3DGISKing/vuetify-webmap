@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.17 - 2025-01-31
+
+#### Updated
+
+- smooth contour.
+
 ### 0.0.16 - 2025-01-31
 
 #### Updated

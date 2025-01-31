@@ -1,5 +1,6 @@
 import { extent, range } from "d3";
 import { contours as d3contours } from "d3-contour";
+import smooth from "to-smooth";
 
 const colors = [
     {
@@ -179,7 +180,7 @@ class ContourGenerator {
                         },
                         geometry: {
                             type: "LineString",
-                            coordinates: coordinates
+                            coordinates: smooth(coordinates, { iteration: 1, factor: 0.75 })
                         }
                     };
 
