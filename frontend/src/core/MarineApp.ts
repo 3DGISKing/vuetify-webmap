@@ -1,6 +1,7 @@
+import { NetCDFReader } from "netcdfjs";
 import "./APIInterface";
 import APIInterface from "./APIInterface";
-import { NetCDFReader } from "netcdfjs";
+import ContourGenerator from "./ContourGenerator";
 
 let theApp: MarineApp;
 
@@ -9,18 +10,22 @@ export class MarineApp {
     private _mapCount = 0;
     private _waveHeightData: any;
 
+    contourGenerator: ContourGenerator;
+
     constructor() {
         theApp = this;
+        this.contourGenerator = new ContourGenerator();
 
-        this.prepareWaveHeightData();
+        // this.prepareWaveHeightData("./data/cmems_mod_glo_wav_my_0.2deg-climatology_P1M-m_1737619085988-netcdf.nc");
+        this.prepareWaveHeightData("./data/clip.nc");
     }
 
     getWaveHeightData() {
         return this._waveHeightData;
     }
 
-    prepareWaveHeightData() {
-        fetch("./data/cmems_mod_glo_wav_my_0.2deg-climatology_P1M-m_1737619085988-netcdf.nc")
+    prepareWaveHeightData(netCDFUrl: string) {
+        fetch(netCDFUrl)
             .then((response) => response.arrayBuffer())
             .then((arrayBuffer) => {
                 // Read the NetCDF file

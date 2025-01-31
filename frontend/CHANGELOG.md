@@ -1,5 +1,12 @@
 # Change Log
 
+### 0.0.16 - 2025-01-31
+
+#### Updated
+
+- remove boundary points from polygon.
+- extract contour as line string.
+
 ### 0.0.15 - 2025-01-29
 
 #### Added
