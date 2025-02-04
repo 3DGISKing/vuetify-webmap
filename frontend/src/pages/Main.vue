@@ -21,6 +21,7 @@
             <v-tab value="contourMap"> ContourMap </v-tab>
             <v-tab value="leafletDistributeMap"> Leaflet Distribute Map </v-tab>
             <v-tab value="cesiumDistributeMap"> Cesium Distribute Map </v-tab>
+            <v-tab value="table"> Table </v-tab>
         </v-tabs>
 
         <v-tabs-window v-model="tab" class="tab-window-root">
@@ -36,6 +37,9 @@
             <v-tabs-window-item value="cesiumDistributeMap">
                 <CesiumDistributeMap />
             </v-tabs-window-item>
+            <v-tabs-window-item value="table">
+                <TestTable />
+            </v-tabs-window-item>
         </v-tabs-window>
     </v-card>
 </template>
@@ -43,7 +47,7 @@
 <script lang="ts">
 export default {
     data: () => ({
-        tab: "leafletMap"
+        tab: "table"
     }),
     methods: {}
 };

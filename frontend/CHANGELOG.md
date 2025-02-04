@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.18 - 2025-02-04
+
+#### Added
+
+- test table using rowspan.
+
 ### 0.0.17 - 2025-01-31
 
 #### Updated
