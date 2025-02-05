@@ -11,6 +11,7 @@ declare module 'vue' {
     CesiumMap: typeof import('./src/components/CesiumMap.vue')['default']
     CesiumMapList: typeof import('./src/components/CesiumMapList.vue')['default']
     ContourMap: typeof import('./src/components/ContourMap.vue')['default']
+    Editor: typeof import('./src/components/Editor.vue')['default']
     LeafletDistributeMap: typeof import('./src/components/LeafletDistributeMap.vue')['default']
     LeafletMap: typeof import('./src/components/LeafletMap.vue')['default']
     LeafletMapList: typeof import('./src/components/LeafletMapList.vue')['default']

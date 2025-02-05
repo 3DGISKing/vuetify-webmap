@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.19 - 2025-02-05
+
+#### Added
+
+- PolylineEditor.
+
 ### 0.0.18 - 2025-02-04
 
 #### Added

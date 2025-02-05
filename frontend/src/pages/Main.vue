@@ -22,6 +22,7 @@
             <v-tab value="leafletDistributeMap"> Leaflet Distribute Map </v-tab>
             <v-tab value="cesiumDistributeMap"> Cesium Distribute Map </v-tab>
             <v-tab value="table"> Table </v-tab>
+            <v-tab value="editor"> Editor </v-tab>
         </v-tabs>
 
         <v-tabs-window v-model="tab" class="tab-window-root">
@@ -40,14 +41,19 @@
             <v-tabs-window-item value="table">
                 <TestTable />
             </v-tabs-window-item>
+            <v-tabs-window-item value="editor">
+                <Editor />
+            </v-tabs-window-item>
         </v-tabs-window>
     </v-card>
 </template>
 
 <script lang="ts">
+import Editor from "@/components/Editor.vue";
+
 export default {
     data: () => ({
-        tab: "table"
+        tab: "editor"
     }),
     methods: {}
 };

@@ -32,8 +32,8 @@ const router = createRouter({
         {
             path: "/",
             name: "Main",
-            component: () => import("@/pages/Main.vue"),
-            beforeEnter: requireAuth
+            component: () => import("@/pages/Main.vue")
+            // beforeEnter: requireAuth
         },
         {
             path: "/signin",
