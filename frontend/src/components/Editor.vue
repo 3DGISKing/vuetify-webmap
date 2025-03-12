@@ -1,14 +1,38 @@
 <template>
     <div>
+        <v-dialog v-model="dialog" max-width="400" persistent>
+            <template v-slot:activator="{ props: activatorProp }">
+                <v-btn v-bind="activatorProp"> Open Dialog </v-btn>
+            </template>
+
+            <v-card
+                prepend-icon="mdi-map-marker"
+                text="Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running."
+                title="Use Google's location service?"
+            >
+                <template v-slot:actions>
+                    <v-spacer></v-spacer>
+
+                    <v-btn @click="dialog = false"> Disagree </v-btn>
+
+                    <v-btn @click="dialog = false"> Agree </v-btn>
+                </template>
+            </v-card>
+        </v-dialog>
+
+        <v-btn @click="dialog = true"> Open Dialog1 </v-btn>
+
         <div id="map" style="height: 90vh" />
     </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import "leaflet/dist/leaflet.css";
 import * as L from "leaflet";
 import PolylineEditor from "@/core/editor/EditablePolyline";
+
+const dialog = ref(false);
 
 onMounted(() => {
     const map = L.map("map");

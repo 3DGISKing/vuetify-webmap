@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.20 - 2025-03-12
+
+#### Added
+
+- Test code for dialog.
+
 ### 0.0.19 - 2025-02-05
 
 #### Added
