@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.21 - 2025-03-13
+
+#### Added
+
+- change of zIndex of layers.
+
 ### 0.0.20 - 2025-03-12
 
 #### Added

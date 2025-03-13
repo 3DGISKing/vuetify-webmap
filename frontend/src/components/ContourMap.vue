@@ -21,11 +21,16 @@ onMounted(() => {
         markerZoomAnimation: true
     });
 
-    const googleSat = L.tileLayer("http://localhost:1217/GoogleSatTMS/lyrss&x{x}&y{y}&z{z}.jpg", {
+    map.createPane("contour");
+
+    // This pane is above markers but below popups
+    map.getPane("contour").style.zIndex = 399;
+
+    const googleSat = L.tileLayer("http://localhost:3000/data/GoogleSatTMS/lyrss&x{x}&y{y}&z{z}.jpg", {
         maxZoom: 20
     });
 
-    googleSat.addTo(map);
+    // googleSat.addTo(map);
 
     const marineApp = inject("marineApp") as MarineApp;
 
@@ -49,9 +54,22 @@ onMounted(() => {
         };
 
         L.geoJSON(feature, {
-            style: myStyle
+            style: myStyle,
+            pane: "contour"
         }).addTo(map);
     });
+
+    const latLngBounds = L.latLngBounds([
+        [-90, -180],
+        [90, 180]
+    ]);
+
+    const imageOverlay = L.imageOverlay("http://localhost:3000/data/GoogleSatTMS/lyrss&x0&y0&z0.jpg", latLngBounds, {
+        opacity: 0.8,
+        // errorOverlayUrl: errorOverlayUrl,
+        alt: "World",
+        interactive: true
+    }).addTo(map);
 
     setTimeout(() => {
         map.invalidateSize(true);
