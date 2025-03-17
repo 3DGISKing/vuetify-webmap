@@ -76,6 +76,18 @@ onMounted(() => {
         interactive: true
     }).addTo(map);
 
+    const myIcon = L.icon({
+        iconUrl: "http://localhost:3000/icons/leaf-green.png",
+        iconSize: [20, 40],
+        iconAnchor: [22, 94]
+        //popupAnchor: [-3, -76],
+        // shadowUrl: "my-icon-shadow.png",
+        // shadowSize: [68, 95],
+        // shadowAnchor: [22, 94]
+    });
+
+    L.marker([39, 127], { icon: myIcon }).addTo(map);
+
     setTimeout(() => {
         map.invalidateSize(true);
     }, 0);
