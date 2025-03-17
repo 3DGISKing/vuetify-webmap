@@ -18,6 +18,8 @@ onMounted(() => {
         wheelPxPerZoomLevel: 1000,
         zoomControl: true,
         center: [35, 127],
+        minZoom: 4,
+        maxZoom: 7,
         zoom: 4,
         zoomAnimation: false,
         fadeAnimation: true,

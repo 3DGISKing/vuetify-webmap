@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.23 - 2025-03-17
+
+#### Added
+
+- test code for minZoom, maxZoom.
+
 ### 0.0.22 - 2025-03-17
 
 #### Added
