@@ -13,6 +13,9 @@ import { MarineApp } from "@/core/MarineApp";
 
 onMounted(() => {
     const map = L.map("contour-map", {
+        zoomDelta: 0.1,
+        zoomSnap: 0,
+        wheelPxPerZoomLevel: 1000,
         zoomControl: true,
         center: [35, 127],
         zoom: 4,

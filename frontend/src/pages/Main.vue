@@ -53,7 +53,7 @@ import Editor from "@/components/Editor.vue";
 
 export default {
     data: () => ({
-        tab: "editor"
+        tab: "contourMap"
     }),
     methods: {}
 };

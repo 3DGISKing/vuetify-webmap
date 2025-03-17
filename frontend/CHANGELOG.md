@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.22 - 2025-03-17
+
+#### Added
+
+- test code for zoomDelta, zoomSnap, wheelPxPerZoomLevel.
+
 ### 0.0.21 - 2025-03-13
 
 #### Added
