@@ -142,6 +142,7 @@ class ContourGenerator {
         // @ts-ignore
         // d3.range returns an array of evenly-spaced numbers
         const thresholds = range(zDomain[0], zDomain[1], (zDomain[1] - zDomain[0]) / options.thresholds);
+        // const thresholds = [0, 1, 1.5, 2];
 
         const values = data.z.flat();
         const contours = d3contours().size([data.z[0].length, data.z.length]).thresholds(thresholds)(values);
@@ -167,6 +168,24 @@ class ContourGenerator {
         };
 
         for (let i = 0; i < contours.length; i++) {
+            const feature = {
+                type: "Feature",
+                properties: {
+                    value: contours[i].value
+                },
+                geometry: {
+                    type: "MultiPolygon",
+                    coordinates: contours[i].coordinates
+                }
+            };
+
+            geoJson.features.push(feature);
+        }
+
+        return geoJson;
+
+        /*
+        for (let i = 0; i < contours.length; i++) {
             for (let j = 0; j < contours[i].coordinates[0].length; j++) {
                 const coordinates = contours[i].coordinates[0][j];
 
@@ -190,6 +209,7 @@ class ContourGenerator {
         }
 
         return geoJson;
+        */
     }
 
     isOnBoundary(coord: any) {

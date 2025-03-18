@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.24 - 2025-03-18
+
+#### Added
+
+- test code to add difference between contour and boundary.
+
 ### 0.0.23 - 2025-03-17
 
 #### Added

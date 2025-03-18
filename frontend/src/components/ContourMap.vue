@@ -8,6 +8,7 @@
 import { inject, onMounted } from "vue";
 import "leaflet/dist/leaflet.css";
 import * as L from "leaflet";
+import * as turf from "@turf/turf";
 
 import { MarineApp } from "@/core/MarineApp";
 
@@ -82,7 +83,7 @@ onMounted(() => {
         center: [35, 127],
         minZoom: 4,
         maxZoom: 7,
-        zoom: 4,
+        zoom: 6,
         zoomAnimation: false,
         fadeAnimation: true,
         markerZoomAnimation: true
@@ -91,13 +92,11 @@ onMounted(() => {
     map.createPane("contour");
 
     // This pane is above markers but below popups
-    map.getPane("contour").style.zIndex = 399;
+    const pane = map.getPane("contour");
 
-    const googleSat = L.tileLayer("http://localhost:3000/data/GoogleSatTMS/lyrss&x{x}&y{y}&z{z}.jpg", {
-        maxZoom: 20
-    });
-
-    // googleSat.addTo(map);
+    if (pane) {
+        pane.style.zIndex = "399";
+    }
 
     const marineApp = inject("marineApp") as MarineApp;
 
@@ -105,25 +104,46 @@ onMounted(() => {
     const contourGenerator = marineApp.contourGenerator;
 
     const contour = contourGenerator.createContours(data, {
-        thresholds: 50
+        thresholds: 10
     });
 
     const features = contour.features;
-    const min = features[0].properties.value;
+    const firstFeature = features[0];
+    const min = firstFeature.properties.value;
     const max = features[features.length - 1].properties.value;
+
+    const turfFirstpolygon = turf.polygon(firstFeature.geometry.coordinates[0]);
+    const enveloped = turf.envelope(turfFirstpolygon);
+    const difference = turf.difference(turf.featureCollection([enveloped, turfFirstpolygon]));
+
+    const diffLayer = L.geoJSON(difference, {
+        style: {
+            color: "#0000FF",
+            opacity: 1,
+            weight: 2,
+            fillOpacity: 1
+        },
+        pane: "contour"
+    });
+
+    diffLayer.addTo(map);
+    diffLayer.bindPopup(`<table><tbody><tr><td>diff</td></tr></tbody></table>`);
 
     features.forEach((feature) => {
         const myStyle = {
             color: contourGenerator.getColor(feature.properties.value, min, max),
             opacity: 1,
             weight: 2,
-            fillOpacity: 0
+            fillOpacity: 1
         };
 
-        L.geoJSON(feature, {
+        const layer = L.geoJSON(feature, {
             style: myStyle,
             pane: "contour"
-        }).addTo(map);
+        });
+
+        layer.addTo(map);
+        layer.bindPopup(`<table><tbody><tr><td>${feature.properties.value}</td></tr></tbody></table>`);
     });
 
     const latLngBounds = L.latLngBounds([
@@ -136,7 +156,9 @@ onMounted(() => {
         // errorOverlayUrl: errorOverlayUrl,
         alt: "World",
         interactive: true
-    }).addTo(map);
+    });
+
+    imageOverlay.addTo(map);
 
     const myIcon = L.icon({
         iconUrl: "http://localhost:3000/icons/leaf-green.png",
