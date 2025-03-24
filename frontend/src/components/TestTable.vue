@@ -6,7 +6,11 @@
                     <tr>
                         <td rowspan="2">{{ item.id }}</td>
 
-                        <td class="green">{{ item.waveHeight.near }}</td>
+                        <td class="green">
+                            test <br />
+                            {{ item.waveHeight.near }} <br />
+                            test
+                        </td>
                         <td class="green">{{ item.waveDirection.near }}</td>
                     </tr>
                     <tr>
@@ -23,7 +27,7 @@ const items = [
     {
         id: 1,
         waveHeight: {
-            near: 1.1,
+            near: "wave height near \n ocean is 10m",
             far: 1.3
         },
         waveDirection: {
