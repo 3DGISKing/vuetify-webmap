@@ -172,6 +172,13 @@ onMounted(() => {
 
     L.marker([39, 127], { icon: myIcon, rotationAngle: 45 }).addTo(map);
 
+    L.marker([38, 127], {
+        icon: L.divIcon({
+            // iconSize: new L.Point(20, 20),
+            html: "<b>" + "Hi" + "</b>"
+        })
+    }).addTo(map);
+
     setTimeout(() => {
         map.invalidateSize(true);
     }, 0);
