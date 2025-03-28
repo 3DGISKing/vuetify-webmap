@@ -23,6 +23,7 @@
             <v-tab value="cesiumDistributeMap"> Cesium Distribute Map </v-tab>
             <v-tab value="table"> Table </v-tab>
             <v-tab value="editor"> Editor </v-tab>
+            <v-tab value="chart"> Chart </v-tab>
         </v-tabs>
 
         <v-tabs-window v-model="tab" class="tab-window-root">
@@ -44,6 +45,9 @@
             <v-tabs-window-item value="editor">
                 <Editor />
             </v-tabs-window-item>
+            <v-tabs-window-item value="chart">
+                <Chart />
+            </v-tabs-window-item>
         </v-tabs-window>
     </v-card>
 </template>
@@ -53,7 +57,7 @@ import Editor from "@/components/Editor.vue";
 
 export default {
     data: () => ({
-        tab: "contourMap"
+        tab: "chart"
     }),
     methods: {}
 };

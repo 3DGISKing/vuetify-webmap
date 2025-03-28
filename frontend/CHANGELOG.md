@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.25 - 2025-03-28
+
+#### Added
+
+- test code for vue-echarts`.
+
 ### 0.0.24 - 2025-03-18
 
 #### Added
