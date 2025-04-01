@@ -5,8 +5,9 @@
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
 import ChildComponent from "./ChildComponent.vue";
+import { emitter } from "../composables/useEvent";
 
 export default defineComponent({
     name: "ParentComponent",
@@ -19,6 +20,12 @@ export default defineComponent({
         const handleCustomEvent = (payload) => {
             message.value = payload;
         };
+
+        onMounted(() => {
+            emitter.on("MyEvent", (data) => {
+                alert(`MyEvent: ${JSON.stringify(data)}`);
+            });
+        });
 
         return {
             message,

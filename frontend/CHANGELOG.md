@@ -1,5 +1,11 @@
 # Change Log
 
+### 0.0.28 - 2025-04-01
+
+#### Added
+
+- test code for global custom event.
+
 ### 0.0.26 - 2025-04-01
 
 #### Added
