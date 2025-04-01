@@ -24,6 +24,7 @@
             <v-tab value="table"> Table </v-tab>
             <v-tab value="editor"> Editor </v-tab>
             <v-tab value="chart"> Chart </v-tab>
+            <v-tab value="eventTest1"> Event Test1 </v-tab>
         </v-tabs>
 
         <v-tabs-window v-model="tab" class="tab-window-root">
@@ -48,16 +49,20 @@
             <v-tabs-window-item value="chart">
                 <Chart />
             </v-tabs-window-item>
+            <v-tabs-window-item value="eventTest1">
+                <EventTest1 />
+            </v-tabs-window-item>
         </v-tabs-window>
     </v-card>
 </template>
 
 <script lang="ts">
 import Editor from "@/components/Editor.vue";
+import EventTest1 from "@/components/EventTest1.vue";
 
 export default {
     data: () => ({
-        tab: "chart"
+        tab: "eventTest1"
     }),
     methods: {}
 };
