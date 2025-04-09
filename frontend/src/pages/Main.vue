@@ -23,7 +23,8 @@
             <v-tab value="cesiumDistributeMap"> Cesium Distribute Map </v-tab>
             <v-tab value="table"> Table </v-tab>
             <v-tab value="editor"> Editor </v-tab>
-            <v-tab value="chart"> Chart </v-tab>
+            <v-tab value="chart"> Pie Chart </v-tab>
+            <v-tab value="barchart"> Bar Chart </v-tab>
             <v-tab value="eventTest1"> Event Test1 </v-tab>
         </v-tabs>
 
@@ -49,6 +50,9 @@
             <v-tabs-window-item value="chart">
                 <Chart />
             </v-tabs-window-item>
+            <v-tabs-window-item value="barchart">
+                <BarChart />
+            </v-tabs-window-item>
             <v-tabs-window-item value="eventTest1">
                 <EventTest1 />
             </v-tabs-window-item>
@@ -62,7 +66,7 @@ import EventTest1 from "@/components/EventTest1.vue";
 
 export default {
     data: () => ({
-        tab: "eventTest1"
+        tab: "barchart"
     }),
     methods: {}
 };
