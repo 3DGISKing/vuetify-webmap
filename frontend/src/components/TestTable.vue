@@ -7,9 +7,9 @@
                         <td rowspan="2">{{ item.id }}</td>
 
                         <td class="green">
-                            test <br />
-                            {{ item.waveHeight.near }} <br />
-                            test
+                            {{ topMessage }} <br />
+                            {{ bottomMessage }} <br />
+                            {{ topMessage }} <br />
                         </td>
                         <td class="green">{{ item.waveDirection.near }}</td>
                     </tr>
@@ -23,6 +23,11 @@
     </v-app>
 </template>
 <script setup>
+import { ref } from "vue";
+
+const topMessage = ref("top message");
+const bottomMessage = ref("bottom message");
+
 const items = [
     {
         id: 1,
