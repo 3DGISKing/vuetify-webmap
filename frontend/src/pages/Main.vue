@@ -26,6 +26,7 @@
             <v-tab value="chart"> Pie Chart </v-tab>
             <v-tab value="barchart"> Bar Chart </v-tab>
             <v-tab value="eventTest1"> Event Test1 </v-tab>
+            <v-tab value="simplify"> Simplify </v-tab>
             <v-tab value="rasterize"> Rasterize </v-tab>
         </v-tabs>
 
@@ -57,6 +58,9 @@
             <v-tabs-window-item value="eventTest1">
                 <EventTest1 />
             </v-tabs-window-item>
+            <v-tabs-window-item value="simplify">
+                <Simplify />
+            </v-tabs-window-item>
             <v-tabs-window-item value="rasterize">
                 <Rasterize />
             </v-tabs-window-item>
@@ -68,6 +72,7 @@
 import Editor from "@/components/Editor.vue";
 import EventTest1 from "@/components/EventTest1.vue";
 import Rasterize from "@/components/Rasterize.vue";
+import Simplify from "@/components/Simplify.vue";
 
 export default {
     data: () => ({
