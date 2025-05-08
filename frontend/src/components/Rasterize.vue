@@ -1,6 +1,5 @@
 <template>
     <div>
-        <v-btn> Button </v-btn>
         <div id="map" style="height: 90vh" />
     </div>
 </template>

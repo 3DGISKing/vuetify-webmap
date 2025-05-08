@@ -1,9 +1,10 @@
 <template>
     <v-app>
-        <v-container>
-            <v-data-table :items="items">
+        <v-btn @click="handleClick"> Button </v-btn>
+        <v-container id="test-table-container">
+            <v-data-table :items="items" style="height: 80vh">
                 <template v-slot:item="{ item, index }">
-                    <tr>
+                    <tr :id="`row-${index}`">
                         <td rowspan="2">{{ item.id }}</td>
 
                         <td class="green">
@@ -25,33 +26,34 @@
 <script setup>
 import { ref } from "vue";
 
+import { useGoTo } from "vuetify";
+
+const goTo = useGoTo();
+
 const topMessage = ref("top message");
 const bottomMessage = ref("bottom message");
 
-const items = [
-    {
-        id: 1,
+const items = [];
+
+for (let i = 0; i < 100; i++) {
+    items.push({
+        id: i,
         waveHeight: {
-            near: "wave height near \n ocean is 10m",
             far: 1.3
         },
         waveDirection: {
             near: 1.2,
             far: 1.4
         }
-    },
-    {
-        id: 2,
-        waveHeight: {
-            near: 2.1,
-            far: 2.3
-        },
-        waveDirection: {
-            near: 2.2,
-            far: 2.4
-        }
-    }
-];
+    });
+}
+
+function handleClick(event) {
+    console.log(1);
+    //goTo("#row-9", { container: "#test-table-container" });
+
+    goTo("#row-9", { container: ".v-table__wrapper" });
+}
 </script>
 
 <style scoped>

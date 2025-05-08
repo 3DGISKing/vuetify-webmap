@@ -76,7 +76,7 @@ import Simplify from "@/components/Simplify.vue";
 
 export default {
     data: () => ({
-        tab: "rasterize"
+        tab: "table"
     }),
     methods: {}
 };
