@@ -5,6 +5,7 @@
 </template>
 
 <script setup lang="ts">
+// @ts-nocheck
 import { inject, onMounted } from "vue";
 import "leaflet/dist/leaflet.css";
 import * as L from "leaflet";

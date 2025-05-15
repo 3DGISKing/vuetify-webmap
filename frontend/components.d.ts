@@ -14,7 +14,6 @@ declare module 'vue' {
     Chart: typeof import('./src/components/Chart.vue')['default']
     ChildComponent: typeof import('./src/components/ChildComponent.vue')['default']
     ContourMap: typeof import('./src/components/ContourMap.vue')['default']
-    copy: typeof import('./src/components/Chart copy.vue')['default']
     Editor: typeof import('./src/components/Editor.vue')['default']
     EventTest1: typeof import('./src/components/EventTest1.vue')['default']
     LeafletDistributeMap: typeof import('./src/components/LeafletDistributeMap.vue')['default']

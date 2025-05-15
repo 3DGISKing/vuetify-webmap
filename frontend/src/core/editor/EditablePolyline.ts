@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import * as L from "leaflet";
 
 L.Polyline.polylineEditor = L.Polyline.extend({

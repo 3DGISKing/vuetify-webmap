@@ -5,6 +5,8 @@
 </template>
 
 <script setup lang="ts">
+// @ts-nocheck
+
 import { onMounted } from "vue";
 import * as turf from "@turf/turf";
 

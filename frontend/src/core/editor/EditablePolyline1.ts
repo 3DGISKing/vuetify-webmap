@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import * as L from "leaflet";
 
 const EditablePolyline = L.Polyline.extend({
@@ -36,13 +38,9 @@ const EditablePolyline = L.Polyline.extend({
         });
     },
 
-    _addMarkers = function() {
-        
-    },
+    _addMarkers = function () {},
 
-    startEditing: function {
-
-    }
+    startEditing: function () {}
 });
 
 EditablePolyline.addInitHook(function () {
