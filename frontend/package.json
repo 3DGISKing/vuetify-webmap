@@ -26,6 +26,7 @@
         "leaflet-draw": "^1.0.4",
         "leaflet-measure": "^3.1.0",
         "netcdfjs": "^3.0.0",
+        "socket.io-client": "^4.8.1",
         "tiny-emitter": "^2.1.0",
         "to-smooth": "^2.2.0",
         "turf": "^3.0.14",

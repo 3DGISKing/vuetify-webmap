@@ -25,6 +25,7 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     SimpleMap: typeof import('./src/components/SimpleMap.vue')['default']
     Simplify: typeof import('./src/components/Simplify.vue')['default']
+    SocketTest: typeof import('./src/components/SocketTest.vue')['default']
     TestTable: typeof import('./src/components/TestTable.vue')['default']
     VerticalToolbar: typeof import('./src/components/VerticalToolbar.vue')['default']
   }

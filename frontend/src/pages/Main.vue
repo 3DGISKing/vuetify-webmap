@@ -28,6 +28,7 @@
             <v-tab value="eventTest1"> Event Test1 </v-tab>
             <v-tab value="simplify"> Simplify </v-tab>
             <v-tab value="rasterize"> Rasterize </v-tab>
+            <v-tab value="socket"> Socket Test </v-tab>
         </v-tabs>
 
         <v-tabs-window v-model="tab" class="tab-window-root">
@@ -64,6 +65,9 @@
             <v-tabs-window-item value="rasterize">
                 <Rasterize />
             </v-tabs-window-item>
+            <v-tabs-window-item value="socket">
+                <SocketTest />
+            </v-tabs-window-item>
         </v-tabs-window>
     </v-card>
 </template>
@@ -73,10 +77,11 @@ import Editor from "@/components/Editor.vue";
 import EventTest1 from "@/components/EventTest1.vue";
 import Rasterize from "@/components/Rasterize.vue";
 import Simplify from "@/components/Simplify.vue";
+import SocketTest from "@/components/SocketTest.vue";
 
 export default {
     data: () => ({
-        tab: "table"
+        tab: "socket"
     }),
     methods: {}
 };
