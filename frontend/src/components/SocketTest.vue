@@ -49,6 +49,7 @@ function handleSend() {
 </script>
 
 <template>
+    <v-date-picker hide-header></v-date-picker>
     <div>
         <!-- <input type="text" id="roomInput" placeholder="Room ID" /> -->
 
